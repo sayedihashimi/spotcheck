@@ -19,7 +19,9 @@ function UpdateValues() {
         $("#soundOfInterestLevel").val("");
     }
     else {
-        var soundOfInterestLevel = 10.0 * Math.log10(Math.pow(totalSoundLevel / 10.0, 10) - Math.pow(backgroundOnlySoundLevel / 10.0, 10));
+        var soundOfInterestLevel = 10.0 * Math.log10(
+                                            Math.pow(10,totalSoundLevel / 10.0) -
+                                            Math.pow(10,backgroundOnlySoundLevel / 10.0));
         $("#soundOfInterestLevel").val(Math.round(soundOfInterestLevel * 100) / 100);
 
         if (distFromSound && distFromSound >= 0) {
@@ -31,6 +33,4 @@ function UpdateValues() {
         }
     }
 }
-
-
 
