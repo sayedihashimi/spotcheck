@@ -45,3 +45,7 @@ input {
     color: black;
     display:none;
 }
+#resetButton{
+    margin-top:10px;
+    margin-bottom:10px;
+}

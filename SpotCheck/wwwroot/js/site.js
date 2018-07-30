@@ -6,7 +6,9 @@ $(".userinput").change(function () {
 $(".userinput").keyup(function () {
     UpdateValues();
 });
-
+$("#resetButton").click(function () {
+    ResetValues();
+});
 function UpdateValues() {
     // check to see if all inputs are filled in for backgound sound level and update if so
     var totalSoundLevel = parseInt($("#totalSoundLevel").val());
@@ -71,4 +73,9 @@ function UpdateResultMessageArea(estSoundLevel, soundOfInterest) {
         private const string ResultsTooPositiveMessage = @"Estimated Sound Level is less than 10 dBA LOWER THAN Sound of Interest Level. Check your measurement location. There may be a sound source close to your measurement locations that is influencing the results.";
 
      */
+}
+
+function ResetValues() {
+    $("input").val("");
+    UpdateResultMessageArea();
 }
