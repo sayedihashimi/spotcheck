@@ -16,7 +16,7 @@ function UpdateValues() {
 
     if (!totalSoundLevel || !backgroundOnlySoundLevel ||       
         totalSoundLevel < 0 || backgroundOnlySoundLevel < 0) {
-        $("#soundOfInterestLevel").val("999");
+        $("#soundOfInterestLevel").val("");
     }
     else {
         var soundOfInterestLevel = 10.0 * Math.log10(Math.pow(totalSoundLevel / 10.0, 10) - Math.pow(backgroundOnlySoundLevel / 10.0, 10));
@@ -27,7 +27,7 @@ function UpdateValues() {
             $("#estSoundLevel").val(Math.round((estSoundLevel * 100) / 100));
         }
         else {
-            $("#estSoundLevel").val(999);
+            $("#estSoundLevel").val("");
         }
     }
 }
