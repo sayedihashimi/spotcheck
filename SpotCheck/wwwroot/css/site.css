@@ -24,8 +24,9 @@ h1,h2,h3{
 h1 {
     padding-bottom: 10px;
 }
-h2{
-    margin-top:10px;
+h2 {
+    margin-top: 10px;
+    color: #1ed2f4;
 }
 input {
     background-color: #1ed2f4;
