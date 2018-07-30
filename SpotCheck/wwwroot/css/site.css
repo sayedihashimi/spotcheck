@@ -38,3 +38,10 @@ input {
     background-color: #254558;
     color: #f4f5f6;
 }
+#resultMessage {
+    margin-top: 10px;
+    background-color: #1ed2f4;
+    padding:10px;
+    color: black;
+    display:none;
+}
