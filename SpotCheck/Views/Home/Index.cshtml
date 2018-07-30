@@ -4,18 +4,18 @@
         Total Sound Level
         (<span class="note">Sound of Interest and Background Sound</span>) (dB):
     </label>
-    <input type="number" min="0" max="999" id="totalSoundLevel" class="userinput" />
+    <input type="number" min="0" max="999" id="totalSoundLevel" class="userinput form-control" />
 
     <label for="backgroundOnlySoundLevel">Background Only Sound Level (dB):</label>
-    <input type="number" min="0" max="999" id="backgroundOnlySoundLevel" class="userinput" />
+    <input type="number" min="0" max="999" id="backgroundOnlySoundLevel" class="userinput form-control" />
 
     <label for="soundOfInterestLevel">Sound of Interest Level (dB):</label>
-    <input type="number" min="0" max="999" id="soundOfInterestLevel" readonly="readonly" class="calculated" />
+    <input type="number" min="0" max="999" id="soundOfInterestLevel" readonly="readonly" class="calculated form-control" />
 
     <h2>Distance Check</h2>
     <label for="distFromSound">Your distance from the sound source (feet)</label>
-    <input type="number" min="0" max="10000" id="distFromSound" class="userinput"/>
+    <input type="number" min="0" max="10000" id="distFromSound" class="userinput form-control"/>
 
     <label for="estSoundLevel">Estimated Sound Level (dB):</label>
-    <input type="number" readonly="readonly" id="estSoundLevel"/>
+    <input type="number" readonly="readonly" id="estSoundLevel" class="form-control calculated"/>
  </div>
