@@ -15,6 +15,7 @@ window.addEventListener('load', async e => {
 });
 
 
+
 $(".userinput").change(function () {
     UpdateValues();
 });
@@ -93,4 +94,11 @@ function UpdateResultMessageArea(estSoundLevel, soundOfInterest) {
 function ResetValues() {
     $("input").val("");
     UpdateResultMessageArea();
+}
+
+// serviceworker related items
+$("#updateAppButton").click(function () { SendUpdateAppToSw(); });
+function SendUpdateAppToSw() {
+    console.log('SendUpdateAppToSw');
+    navigator.serviceWorker.controller.postMessage("UpdateApp");
 }
