@@ -1,5 +1,20 @@
 ﻿// Write your JavaScript code.
 
+
+window.addEventListener('load', async e => {
+    console.log('load event');
+    if ('serviceWorker' in navigator) {
+        try {
+            navigator.serviceWorker.register('sw.js');
+            console.log('SW registered');
+        }
+        catch (error) {
+            console.log('error');
+        }
+    }
+});
+
+
 $(".userinput").change(function () {
     UpdateValues();
 });
@@ -18,7 +33,7 @@ function UpdateValues() {
     var soundOfInterestLevel;
     var estSoundLevel;
     if (!totalSoundLevel || !backgroundOnlySoundLevel ||       
-        totalSoundLevel < 0 || backgroundOnlySoundLevel < 0) {
+        totalSoundLevel <= 0 || backgroundOnlySoundLevel <= 0) {
         $("#soundOfInterestLevel").val("");
     }
     else {
