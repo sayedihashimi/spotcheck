@@ -13,7 +13,7 @@ async function handleInstall(event) {
 }
 
 async function handleFetch(event) {
-    //event.respondWith(networkFirst(event.request));
+    event.respondWith(networkFirst(event.request));
 }
 
 async function networkFirst(request) {
@@ -22,8 +22,8 @@ async function networkFirst(request) {
     // const request = event.request;
 
     try {
-        const response = await fetch(req);
-        cache.put(request, response);
+        const response = await fetch(request);
+        cache.put(request, response.clone());
         return response;
     }
     catch (error) {
